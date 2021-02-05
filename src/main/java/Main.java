@@ -1,14 +1,16 @@
 package main.java;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
 
     public static Scanner s = new Scanner(System.in);
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
-        System.out.println("What type of calculation it's going to be? \n (1. Actual Numbers, 2. Vector, 3. Matrix)");
+        System.out.println("What type of calculation it's going to be? \n (1. Actual Numbers, 2. Actual Numbers & Vector/Matrix " +
+                "3. Vector 4. Matrix 5. Matrix & Vector)");
         int option = s.nextInt();
         s.nextLine();
 
@@ -20,7 +22,7 @@ public class Main {
                 //Combination of actual number and vector/or matrix.
                 break;
             case 3:
-                //Vectors
+                main.java.VectorsOnly.vectorInput();
                 break;
             case 4:
                 //Matrixes
